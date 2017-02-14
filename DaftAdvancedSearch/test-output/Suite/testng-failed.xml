@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="daft.advanced.search.AdvancedSearch">
+        <methods>
+          <include name="advanceSearchResults"/>
+          <include name="minBathroom"/>
+          <include name="afterTest"/>
+          <include name="maxBedroom"/>
+          <include name="beforeTest"/>
+          <include name="mainSearch"/>
+          <include name="maxPrice"/>
+          <include name="minBedroom"/>
+          <include name="advancedSearchPresent"/>
+          <include name="minPrice"/>
+          <include name="propertyType"/>
+          <include name="maxBathroom"/>
+        </methods>
+      </class> <!-- daft.advanced.search.AdvancedSearch -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

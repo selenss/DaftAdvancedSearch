@@ -1,0 +1,228 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>13/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Feb 12 15:41:08 EET 2017</td>
+</tr>
+<tr><td>Total time:</td><td>91 seconds (91173 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='daft.advanced.search.AdvancedSearch.advanceSearchResults()'><b>advanceSearchResults</b><br>Test class: daft.advanced.search.AdvancedSearch<br>Test method: Verification of the results after advanced search<br/>
+<a href="#Output-79782883" onClick='toggleBox("Output-79782883", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-79782883" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-79782883">
+Results are obtained and verified<br/>
+</div>
+</td>
+<td></td>
+<td>28</td>
+<td>daft.advanced.search.AdvancedSearch@42d80b78</td></tr>
+<tr>
+<td title='daft.advanced.search.AdvancedSearch.advancedSearchPresent()'><b>advancedSearchPresent</b><br>Test class: daft.advanced.search.AdvancedSearch<br>Test method: Checking advanced search text link presence and clicking it</td>
+<td></td>
+<td>0</td>
+<td>daft.advanced.search.AdvancedSearch@42d80b78</td></tr>
+<tr>
+<td title='daft.advanced.search.AdvancedSearch.mainSearch()'><b>mainSearch</b><br>Test class: daft.advanced.search.AdvancedSearch<br>Test method: Search based on category, city/county and area<br/>
+<a href="#Output-2095064787" onClick='toggleBox("Output-2095064787", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2095064787" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2095064787">
+First search button is clicked.<br/>
+</div>
+</td>
+<td></td>
+<td>8</td>
+<td>daft.advanced.search.AdvancedSearch@42d80b78</td></tr>
+<tr>
+<td title='daft.advanced.search.AdvancedSearch.maxBathroom()'><b>maxBathroom</b><br>Test class: daft.advanced.search.AdvancedSearch<br>Test method: Random maximum bathroom selection<br/>
+<a href="#Output-272678513" onClick='toggleBox("Output-272678513", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-272678513" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-272678513">
+Max. bathroom selected randomly<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>daft.advanced.search.AdvancedSearch@42d80b78</td></tr>
+<tr>
+<td title='daft.advanced.search.AdvancedSearch.maxBedroom()'><b>maxBedroom</b><br>Test class: daft.advanced.search.AdvancedSearch<br>Test method: Random maximum bedroom selection<br/>
+<a href="#Output-402405659" onClick='toggleBox("Output-402405659", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-402405659" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-402405659">
+Max. bedroom selected randomly<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>daft.advanced.search.AdvancedSearch@42d80b78</td></tr>
+<tr>
+<td title='daft.advanced.search.AdvancedSearch.maxPrice()'><b>maxPrice</b><br>Test class: daft.advanced.search.AdvancedSearch<br>Test method: Random maximum price selection<br/>
+<a href="#Output-725680028" onClick='toggleBox("Output-725680028", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-725680028" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-725680028">
+Max. price selected randomly<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>daft.advanced.search.AdvancedSearch@42d80b78</td></tr>
+<tr>
+<td title='daft.advanced.search.AdvancedSearch.minBathroom()'><b>minBathroom</b><br>Test class: daft.advanced.search.AdvancedSearch<br>Test method: Random minimum bathroom selection<br/>
+<a href="#Output-1944798106" onClick='toggleBox("Output-1944798106", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1944798106" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1944798106">
+Min. bathroom selected randomly<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>daft.advanced.search.AdvancedSearch@42d80b78</td></tr>
+<tr>
+<td title='daft.advanced.search.AdvancedSearch.minBedroom()'><b>minBedroom</b><br>Test class: daft.advanced.search.AdvancedSearch<br>Test method: Random minimum bedroom selection<br/>
+<a href="#Output-1904783235" onClick='toggleBox("Output-1904783235", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1904783235" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1904783235">
+Min. bedroom selected randomly<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>daft.advanced.search.AdvancedSearch@42d80b78</td></tr>
+<tr>
+<td title='daft.advanced.search.AdvancedSearch.minPrice()'><b>minPrice</b><br>Test class: daft.advanced.search.AdvancedSearch<br>Test method: Random minimum price selection<br/>
+<a href="#Output-837457281" onClick='toggleBox("Output-837457281", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-837457281" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-837457281">
+Min. price selected randomly<br/>
+</div>
+</td>
+<td></td>
+<td>9</td>
+<td>daft.advanced.search.AdvancedSearch@42d80b78</td></tr>
+<tr>
+<td title='daft.advanced.search.AdvancedSearch.propertyType()'><b>propertyType</b><br>Test class: daft.advanced.search.AdvancedSearch<br>Test method: Random property type selection<br/>
+<a href="#Output-810267739" onClick='toggleBox("Output-810267739", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-810267739" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-810267739">
+Property type selected randomly<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>daft.advanced.search.AdvancedSearch@42d80b78</td></tr>
+<tr>
+<td title='daft.advanced.search.AdvancedSearch.randomAreaSelection()'><b>randomAreaSelection</b><br>Test class: daft.advanced.search.AdvancedSearch<br>Test method: Random area selection<br/>
+<a href="#Output-335708295" onClick='toggleBox("Output-335708295", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-335708295" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-335708295">
+Area selected randomly<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>daft.advanced.search.AdvancedSearch@42d80b78</td></tr>
+<tr>
+<td title='daft.advanced.search.AdvancedSearch.randomCategorySelection()'><b>randomCategorySelection</b><br>Test class: daft.advanced.search.AdvancedSearch<br>Test method: Random category selection<br/>
+<a href="#Output-1823409783" onClick='toggleBox("Output-1823409783", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1823409783" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1823409783">
+Category selected randomly<br/>
+</div>
+</td>
+<td></td>
+<td>8</td>
+<td>daft.advanced.search.AdvancedSearch@42d80b78</td></tr>
+<tr>
+<td title='daft.advanced.search.AdvancedSearch.randomCountyCitySelection()'><b>randomCountyCitySelection</b><br>Test class: daft.advanced.search.AdvancedSearch<br>Test method: Random county/city selection<br/>
+<a href="#Output-1182908789" onClick='toggleBox("Output-1182908789", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1182908789" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1182908789">
+City/County selected randomly<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>daft.advanced.search.AdvancedSearch@42d80b78</td></tr>
+</table><p>
+</body>
+</html>

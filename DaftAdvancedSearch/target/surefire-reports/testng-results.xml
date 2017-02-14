@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="13" passed="13">
+  <reporter-output>
+    <line>
+      <![CDATA[Category selected randomly]]>
+    </line>
+    <line>
+      <![CDATA[City/County selected randomly]]>
+    </line>
+    <line>
+      <![CDATA[Area selected randomly]]>
+    </line>
+    <line>
+      <![CDATA[First search button is clicked.]]>
+    </line>
+    <line>
+      <![CDATA[Min. price selected randomly]]>
+    </line>
+    <line>
+      <![CDATA[Max. price selected randomly]]>
+    </line>
+    <line>
+      <![CDATA[Min. bedroom selected randomly]]>
+    </line>
+    <line>
+      <![CDATA[Max. bedroom selected randomly]]>
+    </line>
+    <line>
+      <![CDATA[Min. bathroom selected randomly]]>
+    </line>
+    <line>
+      <![CDATA[Max. bathroom selected randomly]]>
+    </line>
+    <line>
+      <![CDATA[Property type selected randomly]]>
+    </line>
+    <line>
+      <![CDATA[Results are obtained and verified]]>
+    </line>
+  </reporter-output>
+  <suite name="Suite" duration-ms="92587" started-at="2017-02-12T12:55:31Z" finished-at="2017-02-12T12:57:04Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="92587" started-at="2017-02-12T12:55:31Z" finished-at="2017-02-12T12:57:04Z">
+      <class name="daft.advanced.search.AdvancedSearch">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:daft.advanced.search.AdvancedSearch@79b4d0f]" name="beforeTest" is-config="true" duration-ms="5306" started-at="2017-02-12T14:55:26Z" finished-at="2017-02-12T14:55:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="randomCategorySelection()[pri:1, instance:daft.advanced.search.AdvancedSearch@79b4d0f]" name="randomCategorySelection" duration-ms="6060" started-at="2017-02-12T14:55:31Z" description="Random category selection" finished-at="2017-02-12T14:55:37Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Category selected randomly]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- randomCategorySelection -->
+        <test-method status="PASS" signature="randomCountyCitySelection()[pri:2, instance:daft.advanced.search.AdvancedSearch@79b4d0f]" name="randomCountyCitySelection" duration-ms="4607" started-at="2017-02-12T14:55:37Z" description="Random county/city selection" finished-at="2017-02-12T14:55:42Z">
+          <reporter-output>
+            <line>
+              <![CDATA[City/County selected randomly]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- randomCountyCitySelection -->
+        <test-method status="PASS" signature="randomAreaSelection()[pri:3, instance:daft.advanced.search.AdvancedSearch@79b4d0f]" name="randomAreaSelection" duration-ms="4518" started-at="2017-02-12T14:55:42Z" description="Random area selection" depends-on-methods="daft.advanced.search.AdvancedSearch.randomCountyCitySelection" finished-at="2017-02-12T14:55:46Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Area selected randomly]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- randomAreaSelection -->
+        <test-method status="PASS" signature="mainSearch()[pri:4, instance:daft.advanced.search.AdvancedSearch@79b4d0f]" name="mainSearch" duration-ms="3933" started-at="2017-02-12T14:55:46Z" description="Search based on category, city/county and area" finished-at="2017-02-12T14:55:50Z">
+          <reporter-output>
+            <line>
+              <![CDATA[First search button is clicked.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- mainSearch -->
+        <test-method status="PASS" signature="advancedSearchPresent()[pri:5, instance:daft.advanced.search.AdvancedSearch@79b4d0f]" name="advancedSearchPresent" duration-ms="1770" started-at="2017-02-12T14:55:50Z" description="Checking advanced search text link presence and clicking it" depends-on-methods="daft.advanced.search.AdvancedSearch.mainSearch" finished-at="2017-02-12T14:55:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- advancedSearchPresent -->
+        <test-method status="PASS" signature="minPrice()[pri:6, instance:daft.advanced.search.AdvancedSearch@79b4d0f]" name="minPrice" duration-ms="5277" started-at="2017-02-12T14:55:52Z" description="Random minimum price selection" depends-on-methods="daft.advanced.search.AdvancedSearch.advancedSearchPresent" finished-at="2017-02-12T14:55:57Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Min. price selected randomly]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- minPrice -->
+        <test-method status="PASS" signature="maxPrice()[pri:7, instance:daft.advanced.search.AdvancedSearch@79b4d0f]" name="maxPrice" duration-ms="4573" started-at="2017-02-12T14:55:57Z" description="Random maximum price selection" depends-on-methods="daft.advanced.search.AdvancedSearch.advancedSearchPresent" finished-at="2017-02-12T14:56:02Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Max. price selected randomly]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- maxPrice -->
+        <test-method status="PASS" signature="minBedroom()[pri:8, instance:daft.advanced.search.AdvancedSearch@79b4d0f]" name="minBedroom" duration-ms="4519" started-at="2017-02-12T14:56:02Z" description="Random minimum bedroom selection" depends-on-methods="daft.advanced.search.AdvancedSearch.advancedSearchPresent" finished-at="2017-02-12T14:56:06Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Min. bedroom selected randomly]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- minBedroom -->
+        <test-method status="PASS" signature="maxBedroom()[pri:9, instance:daft.advanced.search.AdvancedSearch@79b4d0f]" name="maxBedroom" duration-ms="4524" started-at="2017-02-12T14:56:06Z" description="Random maximum bedroom selection" depends-on-methods="daft.advanced.search.AdvancedSearch.advancedSearchPresent" finished-at="2017-02-12T14:56:11Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Max. bedroom selected randomly]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- maxBedroom -->
+        <test-method status="PASS" signature="minBathroom()[pri:10, instance:daft.advanced.search.AdvancedSearch@79b4d0f]" name="minBathroom" duration-ms="4503" started-at="2017-02-12T14:56:11Z" description="Random minimum bathroom selection" depends-on-methods="daft.advanced.search.AdvancedSearch.advancedSearchPresent" finished-at="2017-02-12T14:56:15Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Min. bathroom selected randomly]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- minBathroom -->
+        <test-method status="PASS" signature="maxBathroom()[pri:11, instance:daft.advanced.search.AdvancedSearch@79b4d0f]" name="maxBathroom" duration-ms="4528" started-at="2017-02-12T14:56:15Z" description="Random maximum bathroom selection" depends-on-methods="daft.advanced.search.AdvancedSearch.advancedSearchPresent" finished-at="2017-02-12T14:56:20Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Max. bathroom selected randomly]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- maxBathroom -->
+        <test-method status="PASS" signature="propertyType()[pri:12, instance:daft.advanced.search.AdvancedSearch@79b4d0f]" name="propertyType" duration-ms="4547" started-at="2017-02-12T14:56:20Z" description="Random property type selection" depends-on-methods="daft.advanced.search.AdvancedSearch.advancedSearchPresent" finished-at="2017-02-12T14:56:24Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Property type selected randomly]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- propertyType -->
+        <test-method status="PASS" signature="advanceSearchResults()[pri:13, instance:daft.advanced.search.AdvancedSearch@79b4d0f]" name="advanceSearchResults" duration-ms="39183" started-at="2017-02-12T14:56:24Z" description="Verification of the results after advanced search" depends-on-methods="daft.advanced.search.AdvancedSearch.advancedSearchPresent" finished-at="2017-02-12T14:57:04Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Results are obtained and verified]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- advanceSearchResults -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:daft.advanced.search.AdvancedSearch@79b4d0f]" name="afterTest" is-config="true" duration-ms="2317" started-at="2017-02-12T14:57:04Z" finished-at="2017-02-12T14:57:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- daft.advanced.search.AdvancedSearch -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
