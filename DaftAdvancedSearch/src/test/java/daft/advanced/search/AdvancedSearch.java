@@ -5,12 +5,9 @@ import org.testng.annotations.Test;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.AfterSuite;
@@ -167,9 +164,11 @@ public class AdvancedSearch extends DaftPageObjects {
 			
 		  //selectedMinBedroom will be use for verification
 		  selectedMinBedroom = minBedElements.get(minBedRandomNumber).getText();
-		  String[] selectedMinBedroomNumberStringParts = selectedMinBedroom.split(" bedroom");
+		  String[] selectedMinBedroomNumberStringParts = selectedMinBedroom.split(" bed");
 		  selectedMinBedroomNumber = Integer.parseInt(selectedMinBedroomNumberStringParts[0]);
-			
+		  
+		  
+		  
 		  // Randomly selected dropdown list item is clicked
 		  minBedElements.get(minBedRandomNumber).click();
 		  Thread.sleep(2000);
@@ -196,7 +195,7 @@ public class AdvancedSearch extends DaftPageObjects {
 		  
 		  // selectedMaxBedroom will be use for verification
 		  selectedMaxBedroom = maxBedElements.get(maxBedRandomNumber).getText();
-		  String[] selectedMaxBedroomNumberStringParts = selectedMaxBedroom.split(" bedroom");
+		  String[] selectedMaxBedroomNumberStringParts = selectedMaxBedroom.split(" bed");
 		  selectedMaxBedroomNumber = Integer.parseInt(selectedMaxBedroomNumberStringParts[0]);
 		  
 		  // Randomly selected dropdown list item is clicked
@@ -224,7 +223,7 @@ public class AdvancedSearch extends DaftPageObjects {
 		  
 		  // selectedMinBathroom will be use for verification
 		  selectedMinBathroom = minBathElements.get(minBathRandomNumber).getText();
-		  String[] selectedMinBathroomNumberStringParts = selectedMinBathroom.split(" bathroom");
+		  String[] selectedMinBathroomNumberStringParts = selectedMinBathroom.split(" bath");
 		  selectedMinBathroomNumber = Integer.parseInt(selectedMinBathroomNumberStringParts[0]);
 		  
 		  // Randomly selected dropdown list item is clicked
@@ -233,7 +232,7 @@ public class AdvancedSearch extends DaftPageObjects {
 		  
 		  Reporter.log("Min. bathroom selected randomly", true);
 	  }else {
-		  Reporter.log("Min. dropdown selection is not available", true);
+		  Reporter.log("Min. bathroom selection is not available", true);
 	  }
 	
   }
@@ -253,8 +252,9 @@ public class AdvancedSearch extends DaftPageObjects {
 		  
 		  // selectedMaxBathroom will be use for verification
 		  selectedMaxBathroom = maxBathElements.get(maxBathRandomNumber).getText();
-		  String[] selectedMaxBathroomNumberStringParts = selectedMaxBathroom.split(" bathroom");
+		  String[] selectedMaxBathroomNumberStringParts = selectedMaxBathroom.split(" bath");
 		  selectedMaxBathroomNumber = Integer.parseInt(selectedMaxBathroomNumberStringParts[0]);
+		  
 		  
 		  // Randomly selected dropdown list item is clicked
 		  maxBathElements.get(maxBathRandomNumber).click();
@@ -289,10 +289,13 @@ public class AdvancedSearch extends DaftPageObjects {
 	  }
   }
   
-  @Test(priority=13,testName="Advanced Search Results",description="Verification of the results after advanced search",dependsOnMethods = { "advancedSearchPresent" })
+  @Test(priority=13,testName="Advanced Search Results",description="Verification of the results after advanced search",
+		dependsOnMethods = { "advancedSearchPresent" })
+  
   public void advanceSearchResults() throws InterruptedException {
+	  Thread.sleep(10000);
 	  advancedTabSearchButton.click();
-	  Thread.sleep(5000);
+	  Thread.sleep(2000);
 		
 	  //Results check if any found or not
 		if (!results.isEmpty()){
@@ -304,16 +307,26 @@ public class AdvancedSearch extends DaftPageObjects {
 			String bedroomNumberString = bedResultsList.get(resultsRandomNumber).getText();
 			String[] bedroomNumberStringParts = bedroomNumberString.split(" Beds|");
 			int bedroomNumber = Integer.parseInt(bedroomNumberStringParts[0]);
-				 
+			
 			//Retrieving number of bathroom in results
 			String bathroomNumberString = bathResultsList.get(resultsRandomNumber).getText();
 			String[] bathroomNumberStringParts = bathroomNumberString.split(" Bath");
 			int bathroomNumber = Integer.parseInt(bathroomNumberStringParts[0]);
-				 
+			
+			System.out.println(bedroomNumber);
+			System.out.println(selectedMinBedroomNumber);
+			System.out.println(selectedMaxBedroomNumber);
+			
+			System.out.println(bathroomNumber);
+			System.out.println(selectedMinBathroomNumber);
+			System.out.println(selectedMaxBathroomNumber);
+			
+			//For selections from min.-max. bedroom and bathroom, conditions for min>max and max<min should be added. 
+			//Otherwise, in these cases selected values are valid and re-selected values are not used. Therefore assertions can lead to failures.
 			//Verification number of bedroom and bathroom in filters vs results
-			Assert.assertEquals((bedroomNumber<=selectedMaxBedroomNumber) && (bedroomNumber>=selectedMinBedroomNumber), true);
-			Assert.assertEquals((bathroomNumber<=selectedMaxBathroomNumber) && (bathroomNumber>=selectedMinBathroomNumber), true);
-		  
+			Assert.assertEquals(((bedroomNumber<=selectedMaxBedroomNumber) && (bedroomNumber>=selectedMinBedroomNumber)), true);
+			Assert.assertEquals(((bathroomNumber<=selectedMaxBathroomNumber) && (bathroomNumber>=selectedMinBathroomNumber)), true);
+			
 		}
 		 else{ // Check for no result
 			 Assert.assertEquals("No results",noResults.getText());

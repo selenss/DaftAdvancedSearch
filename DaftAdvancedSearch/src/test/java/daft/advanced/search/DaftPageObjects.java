@@ -103,10 +103,10 @@ public class DaftPageObjects {
 	@FindBy (xpath=".//table[@id='sr_content']//div[@class='search_result_title_box']")
 	public List <WebElement> results;
 	
-	@FindBy (xpath=".//table[@id='sr_content']//div[@class='box']//li[2]")
+	@FindBy (xpath=".//table[@id='sr_content']//div[@class='box']//ul[@class='info']//li[2]")
 	public List <WebElement> bedResultsList;
 	
-	@FindBy (xpath=".//table[@id='sr_content']//div[@class='box']//li[3]")
+	@FindBy (xpath=".//table[@id='sr_content']//div[@class='box']//ul[@class='info']//li[3]")
 	public List <WebElement> bathResultsList;
 	
 	@FindBy (xpath=".//div[@id='gc_content']/h1")

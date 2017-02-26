@@ -6,17 +6,10 @@
       <class name="daft.advanced.search.AdvancedSearch">
         <methods>
           <include name="advanceSearchResults"/>
-          <include name="minBathroom"/>
           <include name="afterTest"/>
-          <include name="maxBedroom"/>
           <include name="beforeTest"/>
           <include name="mainSearch"/>
-          <include name="maxPrice"/>
-          <include name="minBedroom"/>
           <include name="advancedSearchPresent"/>
-          <include name="minPrice"/>
-          <include name="propertyType"/>
-          <include name="maxBathroom"/>
         </methods>
       </class> <!-- daft.advanced.search.AdvancedSearch -->
     </classes>
